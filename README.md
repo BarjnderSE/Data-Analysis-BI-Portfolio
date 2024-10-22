@@ -33,3 +33,24 @@ Each project includes a detailed explanation of the problem statement, methodolo
 ## Get in Touch
 
 I am passionate about leveraging data to make a positive impact on businesses and organizations. If you have any questions, feedback, or opportunities for collaboration, please don’t hesitate to reach out!
+
+Some Dashboards to review
+
+![TableauAirbnb-Project](https://github.com/user-attachments/assets/b10f2df1-d6f1-451d-b8c1-b12ef0fd44e8)
+
+![Pizza store analysis](https://github.com/user-attachments/assets/94ee576d-824f-4f79-b7ba-135ab3c0e9ac)
+
+![Dataprof1](https://github.com/user-attachments/assets/2f9090ee-ce61-4d46-a9b2-522dc0fb31bb)
+
+![Screenshot 2024-08-02 092901](https://github.com/user-attachments/assets/12c7146f-2482-4827-a8f1-4d601c7b9e37)
+
+![MJ Enterprise Dashboard](https://github.com/user-attachments/assets/94261744-4815-4120-9ada-6b1c7880d0f6)
+
+![S StoreSalesDashboard](https://github.com/user-attachments/assets/13c1f703-5a44-4b34-8e75-5420cd86739c)
+
+
+
+
+
+
+
