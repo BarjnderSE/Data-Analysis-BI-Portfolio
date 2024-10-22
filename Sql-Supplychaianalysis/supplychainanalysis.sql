@@ -1,89 +1,120 @@
-SELECT * FROM supplychain.supply_chain_data;
 -- 1. Which product type generates the highest total revenue?
-SELECT `Product type` AS ProductType, ceil(SUM(`Revenue generated`)) AS Total_Revenue
-FROM supplychain.supply_chain_data
-GROUP BY ProductType
-ORDER BY Total_Revenue DESC;
+SELECT 
+    `Product type` AS ProductType, 
+    CEIL(SUM(`Revenue generated`)) AS Total_Revenue
+FROM 
+    supplychain.supply_chain_data
+GROUP BY 
+    ProductType
+ORDER BY 
+    Total_Revenue DESC;
 
--- 2.What is the distribution of products sold across different customer demographics?
-select sum(`number of products sold`) as TotalProductssold,`customer demographics` as customerdemographics
-from  supplychain.supply_chain_data
-group by customerdemographics
-order by TotalProductssold desc;
+-- 2. What is the distribution of products sold across different customer demographics?
+SELECT 
+    SUM(`number of products sold`) AS TotalProductsSold, 
+    `customer demographics` AS CustomerDemographics
+FROM  
+    supplychain.supply_chain_data
+GROUP BY 
+    CustomerDemographics
+ORDER BY 
+    TotalProductsSold DESC;
 
 -- 3. Which shipping carrier has the lowest average shipping cost?
- select `shipping carriers` as shippingcarriers,truncate(min(`shipping costs`),2)as shippingcost
- from  supplychain.supply_chain_data
- group by shippingcarriers
- order by shippingcost;
+SELECT 
+    `shipping carriers` AS ShippingCarriers, 
+    TRUNCATE(AVG(`shipping costs`), 2) AS AverageShippingCost
+FROM  
+    supplychain.supply_chain_data
+GROUP BY 
+    ShippingCarriers
+ORDER BY 
+    AverageShippingCost ASC;
 
--- 4. Which SUPPLIER have the highest defect rates?
- select `supplier name` as suppliername, avg(`defect rates`) as defectrates
- from supplychain.supply_chain_data
-  group by suppliername
-  order by defectrates desc;
-  -- 5. Which Product have the highest defect rates?
-  SELECT SKU, `Product type`, `Defect rates` as Defect_rates
-FROM supply_chain_data
-ORDER BY Defect_rates DESC
+-- 4. Which supplier has the highest defect rates?
+SELECT 
+    `supplier name` AS SupplierName, 
+    AVG(`defect rates`) AS DefectRates
+FROM 
+    supplychain.supply_chain_data
+GROUP BY 
+    SupplierName
+ORDER BY 
+    DefectRates DESC;
+
+-- 5. Which product has the highest defect rates?
+SELECT 
+    SKU, 
+    `Product type`, 
+    `Defect rates` AS DefectRates
+FROM 
+    supplychain.supply_chain_data
+ORDER BY 
+    DefectRates DESC
 LIMIT 5;
 
 -- 6. Which transportation mode incurs the highest average transportation cost?
-     SELECT `transportation modes` AS Transportation, 
-       AVG(Costs) AS Avgcosts
-FROM supply_chain_data
-GROUP BY Transportation
-ORDER BY Avgcosts DESC;
--- 7. What is the relationship between stock levels and lead times across products?
-       SELECT 
-       `Product type` as producttype,sku,
-    `stock levels` AS `Stock Level`, 
-    `lead times` AS `Lead Times`
+SELECT 
+    `transportation modes` AS Transportation, 
+    AVG(`Cost`) AS AvgCosts
 FROM 
-    supply_chain_data
-     order by `Stock Level` desc;  --  its shows tock levelof sku12 is 100 but lead time is 30 days
-     -- Current Stock Level:
-
-   -- Stock Level: 100 units.
-  --  This stock level is relatively healthy and indicates that you have sufficient inventory on hand to meet customer demand for the time being.
-
--- Lead Time:
-
-  --  Lead Time: 30 days.
-   -- A lead time of 30 days means that if you need to reorder, 
-   -- it will take a full month for additional stock to arrive. This could be a concern if demand increases suddenly.
-   -- and so on ....alter
-   
-   -- 8.Which product or SKU has the highest manufacturing cost?
-   select sku,`manufacturing costs`as manufacturingcosts
-   from supply_chain_data
-   order by manufacturingcosts desc ;
-    -- 9. How do inspection results vary across suppliers or locations?
-
-    SELECT 
-    `supplier name` AS suppliers, 
-    location, 
-   `inspection results` as  inspection, 
-    COUNT(*) AS count
-FROM 
-    supply_chain_data
+    supplychain.supply_chain_data
 GROUP BY 
-    `supplier name`, location,  inspection
+    Transportation
 ORDER BY 
-    suppliers, location, inspection ;   
-    
-    -- 10. What is the average order quantity per product type?
-    select avg(`order quantities`) as avgorderqty, `product type` as producttype
-    from supply_chain_data
-    group by producttype
-    order by avgorderqty
- -- 11. Which supplier has the shortest manufacturing lead time on average?
- SELECT 
-    `supplier name` AS suppliers, 
-    AVG(`Manufacturing lead time`) AS average_lead_time
+    AvgCosts DESC;
+
+-- 7. What is the relationship between stock levels and lead times across products?
+SELECT 
+    `Product type` AS ProductType, 
+    SKU, 
+    `stock levels` AS StockLevel, 
+    `lead times` AS LeadTimes
 FROM 
-    supply_chain_data
+    supplychain.supply_chain_data
+ORDER BY 
+    StockLevel DESC;
+
+-- 8. Which product or SKU has the highest manufacturing cost?
+SELECT 
+    SKU, 
+    `manufacturing costs` AS ManufacturingCosts
+FROM 
+    supplychain.supply_chain_data
+ORDER BY 
+    ManufacturingCosts DESC;
+
+-- 9. How do inspection results vary across suppliers or locations?
+SELECT 
+    `supplier name` AS Suppliers, 
+    location, 
+    `inspection results` AS Inspection, 
+    COUNT(*) AS Count
+FROM 
+    supplychain.supply_chain_data
+GROUP BY 
+    `supplier name`, location, Inspection
+ORDER BY 
+    Suppliers, location, Inspection;
+
+-- 10. What is the average order quantity per product type?
+SELECT 
+    AVG(`order quantities`) AS AvgOrderQty, 
+    `product type` AS ProductType
+FROM 
+    supplychain.supply_chain_data
+GROUP BY 
+    ProductType
+ORDER BY 
+    AvgOrderQty;
+
+-- 11. Which supplier has the shortest manufacturing lead time on average?
+SELECT 
+    `supplier name` AS Suppliers, 
+    AVG(`Manufacturing lead time`) AS AverageLeadTime
+FROM 
+    supplychain.supply_chain_data
 GROUP BY 
     `supplier name`
 ORDER BY 
-    average_lead_time ASC;  -- Sort in ascending order to find the shortest lead time
+    AverageLeadTime ASC;  -- Sort in ascending order to find the shortest lead time
