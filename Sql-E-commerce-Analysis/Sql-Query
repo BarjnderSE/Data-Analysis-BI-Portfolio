@@ -1,0 +1,81 @@
+-- 1. Total sales and revenue generated over the last quarter
+SELECT SUM(total_amount) AS total_revenue_last_quarter
+FROM Orders
+WHERE order_date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH);
+
+-- 2. New customers acquired in the last month
+SELECT COUNT(customer_id) AS new_customers_last_month
+FROM Customers
+WHERE join_date >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH);
+
+-- 3. Products with the highest sales volume
+SELECT p.product_name, SUM(od.quantity) AS total_sales
+FROM OrderDetails od
+JOIN Products p ON od.product_id = p.product_id
+GROUP BY p.product_name
+ORDER BY total_sales DESC
+LIMIT 5;
+
+-- 4. Average order value (AOV)
+SELECT AVG(total_amount) AS average_order_value
+FROM Orders;
+
+-- 5. Seasonal trends affecting sales performance
+SELECT MONTH(order_date) AS month, SUM(total_amount) AS total_sales
+FROM Orders
+GROUP BY month
+ORDER BY month;
+
+-- 6. Customer retention rates
+SELECT (COUNT(DISTINCT customer_id) - COUNT(DISTINCT CASE WHEN order_date < DATE_SUB(CURDATE(), INTERVAL 1 YEAR) THEN customer_id END)) / COUNT(DISTINCT customer_id) * 100 AS retention_rate
+FROM Orders;
+
+-- 7. Most effective marketing campaigns
+SELECT campaign_name, COUNT(DISTINCT order_id) AS conversions
+FROM MarketingCampaigns mc
+JOIN Orders o ON mc.campaign_id = o.campaign_id
+GROUP BY campaign_name
+ORDER BY conversions DESC;
+
+-- 8. Payment method preferences
+SELECT payment_method, COUNT(*) AS usage_count
+FROM Payments
+GROUP BY payment_method;
+
+-- 9. Average delivery time for orders
+SELECT AVG(DATEDIFF(delivery_date, order_date)) AS average_delivery_time
+FROM Orders;
+
+-- 10. Inventory turnover rate
+SELECT (SUM(quantity_sold) / AVG(stock_quantity)) AS inventory_turnover
+FROM (SELECT product_id, SUM(quantity) AS quantity_sold, AVG(stock_quantity) AS stock_quantity
+      FROM OrderDetails od
+      JOIN Products p ON od.product_id = p.product_id
+      GROUP BY product_id) AS turnover_data;
+
+-- 11. Sales forecasts for the next quarter
+SELECT SUM(total_amount) * 1.10 AS forecasted_sales_next_quarter
+FROM Orders
+WHERE order_date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH);
+
+-- 12. Customer feedback correlation with sales
+SELECT AVG(rating) AS average_rating, SUM(total_amount) AS total_sales
+FROM CustomerFeedback cf
+JOIN Orders o ON cf.customer_id = o.customer_id
+GROUP BY cf.customer_id;
+
+-- 13. Percentage of repeat buyers
+SELECT (COUNT(DISTINCT customer_id) - COUNT(DISTINCT CASE WHEN order_count = 1 THEN customer_id END)) / COUNT(DISTINCT customer_id) * 100 AS repeat_buyer_percentage
+FROM (SELECT customer_id, COUNT(order_id) AS order_count FROM Orders GROUP BY customer_id) AS order_counts;
+
+-- 14. Sales by region
+SELECT c.city, SUM(o.total_amount) AS total_sales
+FROM Orders o
+JOIN Customers c ON o.customer_id = c.customer_id
+GROUP BY c.city
+ORDER BY total_sales DESC;
+
+-- 15. Competitor performance analysis (hypothetical competitors table)
+SELECT competitor_name, AVG(market_share) AS avg_market_share, AVG(customer_service_rating) AS avg_service_rating
+FROM Competitors
+GROUP BY competitor_name;
