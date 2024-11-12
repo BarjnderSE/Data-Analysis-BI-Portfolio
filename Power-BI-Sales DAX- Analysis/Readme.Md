@@ -40,38 +40,28 @@ The data used in this project comes from multiple files, each contributing essen
 Implemented the following DAX measures for analytical insights:
 
 ```DAX
-1. DateMaster = CALENDAR(FIRSTDATE('Sales 2014 to 2017'[Date]), LASTDATE('Sales 2014 to 2017'[Date]))
-2. DAY = DAY(DateMaster[Date])
-3. Month = MONTH(DateMaster[Date])
-4. QTR = QUARTER(DateMaster[Date])
-5. Week Day = WEEKDAY(DateMaster[Date])
-6. Week Day Name = FORMAT(DateMaster[Date], "DDD")
-7. Week Num = WEEKNUM(DateMaster[Date])
+    DateMaster = CALENDAR(FIRSTDATE('Sales 2014 to 2017'[Date]), LASTDATE('Sales 2014 to 2017'[Date]))
+    DAY = DAY(DateMaster[Date])
+    Month = MONTH(DateMaster[Date])
+    QTR = QUARTER(DateMaster[Date])
+    Week Day = WEEKDAY(DateMaster[Date])
+    Week Day Name = FORMAT(DateMaster[Date], "DDD")
+    Week Num = WEEKNUM(DateMaster[Date])
 
--- Additional Measures
-8. Total Revenue = SUMX('Sales', 'Sales'[Retail Price] * 'Sales'[Units])
-9. Total Cost = SUMX('Sales', 'Sales'[Standard Cost] * 'Sales'[Units])
-10. Gross Profit = [Total Revenue] - [Total Cost]
-11. Gross Profit MoM Change % = ( [Gross Profit] - PREVIOUSMONTH([Gross Profit]) ) / PREVIOUSMONTH([Gross Profit])
-12. Average Sales per Day = AVERAGEX(VALUES(DateMaster[Date]), [Total Revenue])
-13. QoQ Growth = ( [Total Revenue] - SAMEQTR(PREVIOUSQUARTER([Total Revenue])) ) / SAMEQTR(PREVIOUSQUARTER([Total Revenue]))
-
-
-### 5. Dashboard Visualizations
+Additional Measures: 8. Total Revenue = SUMX('Sales', 'Sales'[Retail Price] * 'Sales'[Units]) 9. Total Cost = SUMX('Sales', 'Sales'[Standard Cost] * 'Sales'[Units]) 10. Gross Profit = [Total Revenue] - [Total Cost] 11. Gross Profit MoM Change % = ( [Gross Profit] - PREVIOUSMONTH([Gross Profit]) ) / PREVIOUSMONTH([Gross Profit]) 12. Average Sales per Day = AVERAGEX(VALUES(DateMaster[Date]), [Total Revenue]) 13. QoQ Growth = ( [Total Revenue] - SAMEQTR(PREVIOUSQUARTER([Total Revenue])) ) / SAMEQTR(PREVIOUSQUARTER([Total Revenue]))
+5. Dashboard Visualizations
 
 The dashboard offers an interactive interface to view sales data with various visuals:
 
-- **KPI Cards**: Highlights for Total Revenue, Gross Profit, and Units Sold.
-- **Pie Charts**: Visualize Gross Profit by Product and Revenue by Subcategory.
-- **Bar Charts**: Show revenue breakdown by SalesRep and Product.
-- **Line and Column Charts**: Display revenue trends over time.
+    KPI Cards: Highlights for Total Revenue, Gross Profit, and Units Sold.
+    Pie Charts: Visualize Gross Profit by Product and Revenue by Subcategory.
+    Bar Charts: Show revenue breakdown by SalesRep and Product.
+    Line and Column Charts: Display revenue trends over time.
 
-### 6. Key Insights
+6. Key Insights
 
-- **Revenue Trends**: The dashboard provides a view of revenue changes over time, segmented by year and product.
-- **Sales by Region**: Geographic insights enable comparison of sales performance across different countries.
-- **Product Analysis**: Gross profit and revenue breakdowns by product and subcategory help identify top performers.
-- **Sales Performance**: Monthly and quarterly growth metrics offer insights into sales trends and help with forecasting.
-
-
+    Revenue Trends: The dashboard provides a view of revenue changes over time, segmented by year and product.
+    Sales by Region: Geographic insights enable comparison of sales performance across different countries.
+    Product Analysis: Gross profit and revenue breakdowns by product and subcategory help identify top performers.
+    Sales Performance: Monthly and quarterly growth metrics offer insights into sales trends and help with forecasting.
 
