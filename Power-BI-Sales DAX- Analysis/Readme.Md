@@ -56,6 +56,7 @@ Implemented the following DAX measures for analytical insights:
 12. Average Sales per Day = AVERAGEX(VALUES(DateMaster[Date]), [Total Revenue])
 13. QoQ Growth = ( [Total Revenue] - SAMEQTR(PREVIOUSQUARTER([Total Revenue])) ) / SAMEQTR(PREVIOUSQUARTER([Total Revenue]))
 
+
 ### 5. Dashboard Visualizations
 
 The dashboard offers an interactive interface to view sales data with various visuals:
