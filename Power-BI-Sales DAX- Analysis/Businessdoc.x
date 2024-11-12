@@ -82,7 +82,7 @@ Using the calculated measures, create an intuitive, one-page Sales Insights Dash
 
     Comprehensive Visuals: Use charts, graphs, and tables to represent insights effectively.
     Time-Sorted Visuals: Ensure months are sorted from January to December when plotting time-based data.
-    Interactive Elements: Enable drill-down capabilities to explore Product, Region, and Category breakdowns.
+  
     KPI Indicators: Include KPI indicators for revenue, costs, profit, and growth rates to highlight key metrics at a glance.
 
 This dashboard will empower stakeholders to understand trends, identify growth opportunities, and make data-driven decisions efficiently.
