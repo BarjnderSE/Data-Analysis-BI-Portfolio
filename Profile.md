@@ -10,12 +10,19 @@ In today's data-driven world, the ability to analyze and interpret data is cruci
 
 ## Skills and Tools
 
-- **Data Analysis**: Proficient in analyzing large datasets using SQL and Python libraries like Pandas and NumPy.
-- **Data Visualization**: Experienced in creating compelling visualizations with tools like Matplotlib, Seaborn, and Power BI to communicate findings effectively.
-- **Statistical Analysis**: Familiar with statistical methods and techniques to interpret data trends and make predictions.
-- **Business Intelligence**: Skilled in using BI tools to derive insights that drive strategic decisions.
-- **SQL**: Proficient in writing complex SQL queries for data extraction, manipulation, and analysis.
-- **Excel**: Experienced in using Excel for data analysis, including pivot tables, charts, and advanced formulas.
+- **Data Analysis**: Proficient in analyzing large datasets using SQL and Python libraries like Pandas, NumPy, and Skimpy, with experience in data profiling using Pandas Profiling.
+- **Data Visualization**: Experienced in creating compelling visualizations using Matplotlib, Seaborn, Power BI, Tableau, and Looker to effectively communicate insights.
+- **Web Scraping**: Skilled in using Python libraries like Beautiful Soup for extracting and processing data from websites.
+- **Data Profiling**: Experienced in exploring and summarizing datasets using Pandas Profiling for better data understanding and quality assessment.
+- **Statistical Analysis**: Familiar with statistical methods and techniques to interpret data trends and make data-driven predictions.
+- **Business Intelligence**: Skilled in leveraging BI tools like Power BI, Tableau, and Looker to generate actionable insights and strategic business decisions.
+- **SQL**: Proficient in writing complex SQL queries for data extraction, transformation, and analysis.
+- **Excel**: Adept at using Excel for data analysis, including pivot tables, charts, and advanced formulas.
+- **Python for Data Analysis**: Proficient in using libraries like Pandas for data manipulation, cleaning, and exploration, with added expertise in data visualization and profiling.
+- **HTML and Data Presentation**: Familiar with HTML for organizing and presenting data-driven web content.
+- **Azure**: Familiar with Azure services 
+- **CSS**: knowledge of CSS for styling web pages and enhancing the visual appeal of data presentation.
+
 
 ## Projects
 
