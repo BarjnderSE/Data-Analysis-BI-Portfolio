@@ -19,6 +19,7 @@ In today's data-driven world, the ability to analyze and interpret data is cruci
 - **SQL**: Proficient in writing complex SQL queries for data extraction, transformation, and analysis.
 - **Excel**: Adept at using Excel for data analysis, including pivot tables, charts, and advanced formulas.
 - **Python for Data Analysis**: Proficient in using libraries like Pandas for data manipulation, cleaning, and exploration, with added expertise in data visualization and profiling.
+- **Matplotlib,Seaborn,Plotly** 
 - **HTML and Data Presentation**: Familiar with HTML for organizing and presenting data-driven web content.
 - **Azure**: Familiar with Azure services 
 - **CSS**: knowledge of CSS for styling web pages and enhancing the visual appeal of data presentation.
