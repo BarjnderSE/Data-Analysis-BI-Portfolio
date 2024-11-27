@@ -66,6 +66,22 @@ DAX Calculated KPIS
 
 Tableau![image](https://github.com/user-attachments/assets/17b8c488-08bd-4b1d-94fd-5b4b792600fd)
 
+Python Viz
+
+![image](https://github.com/user-attachments/assets/dea2ca1c-482e-470d-a292-e10314b835f3)
+![image](https://github.com/user-attachments/assets/68d64614-2284-4fdd-b5bf-f39bbc590714)
+![image](https://github.com/user-attachments/assets/68787c99-b74f-4e12-bffe-cb97b2fedf92)
+
+https://github.com/user-attachments/assets/1ef94f4f-48b4-403f-8a59-5b6f641b78c6
+
+https://github.com/user-attachments/assets/58447bc0-a519-4eae-90cc-d600c58de325
+
+
+
+
+
+
+
 
 
 
