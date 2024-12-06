@@ -53,10 +53,18 @@ This document outlines the steps followed in creating the **Bank Churn Analysis*
 ### 7. **Enhance UI**
    - **Objective**: Improved the report’s aesthetics and usability with better layouts, tooltips, and interactivity.
    - **Outcome**: Created an intuitive and visually appealing Power BI report.
+   - ![image](https://github.com/user-attachments/assets/c0d065f9-1360-4403-9dbd-a215c745980c) add right arow to go to next vie byctrl and click
+Added filters
+![image](https://github.com/user-attachments/assets/46a8ff30-c353-477a-8bdb-5e7447a782b0)
+
 
 ### 8. **Row-Level Security (RLS)**
    - **Objective**: Configured RLS to ensure users only see data they are authorized to access.
    - **Outcome**: Secured report views based on user roles and data access permissions.
+   ![image](https://github.com/user-attachments/assets/d665166f-1ed2-4e96-8a68-d5fdfdfee64e)
+![image](https://github.com/user-attachments/assets/af8f26e1-4f26-443a-a292-b992a8db243d)
+![image](https://github.com/user-attachments/assets/00c96ef1-ce3d-47b8-85fb-2e268b6f8553)
+
 
 ### 9. **Create Workspace and Provide Access**
    - **Objective**: Set up a Power BI workspace and assigned user access.
