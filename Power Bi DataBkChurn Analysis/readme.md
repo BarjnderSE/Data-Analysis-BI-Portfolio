@@ -53,8 +53,9 @@ This document outlines the steps followed in creating the **Bank Churn Analysis*
 ### 7. **Enhance UI**
    - **Objective**: Improved the report’s aesthetics and usability with better layouts, tooltips, and interactivity.
    - **Outcome**: Created an intuitive and visually appealing Power BI report.
-   - ![image](https://github.com/user-attachments/assets/c0d065f9-1360-4403-9dbd-a215c745980c) add right arow to go to next vie byctrl and click
-Added filters
+   - ![image](https://github.com/user-attachments/assets/c0d065f9-1360-4403-9dbd-a215c745980c)
+   - add right arow to go to next view by ctrl and click
+     Added filters for better visualizatuion by year,month,category and more
 ![image](https://github.com/user-attachments/assets/46a8ff30-c353-477a-8bdb-5e7447a782b0)
 
 
