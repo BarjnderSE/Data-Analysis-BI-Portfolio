@@ -7,6 +7,10 @@ This document outlines the steps followed in creating the **Bank Churn Analysis*
 
 ### 1. **Business Requirement Document (BRD)**
    - **Objective**: Defined the business objectives and reporting needs, ensuring clear understanding of goals and KPIs.
+   - ![image](https://github.com/user-attachments/assets/9e85ed3a-d486-4f60-820f-c316cbda3b1f)
+   - ![image](https://github.com/user-attachments/assets/c75b59b0-37f7-443c-8d68-8a7359a50428)
+
+
 
 ### 2. **Data Gathering**
    - **Objective**: Collected data from relevant sources such as Excel and CSV files for the Bank Churn dataset.
