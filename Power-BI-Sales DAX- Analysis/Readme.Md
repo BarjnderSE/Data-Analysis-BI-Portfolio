@@ -1,5 +1,8 @@
 # Power BI Sales Insights Dashboard
 
+# Business Requirement
+
+
 ## Project Overview
 
 This project is a Power BI dashboard that provides a comprehensive overview of sales insights by visualizing data from various sources. The objective is to analyze and report on key metrics such as Total Revenue, Gross Profit, and Units Sold, and to allow users to filter data by country, year, and month for deeper analysis. The project demonstrates skills in data cleaning, modeling, DAX calculations, and visualization, tailored to help in decision-making.
