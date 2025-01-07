@@ -1,8 +1,8 @@
-# Data-Analysis-BI-Portfolio
+# Software Engineering & Data Insights Portfolio
 
-# Data Analysis & Business Intelligence Portfolio
 
-Welcome to my **Data Analysis & Business Intelligence Portfolio**! This repository showcases my journey and skills in the field of data analytics and business intelligence, highlighting various projects that demonstrate my ability to transform raw data into actionable insights.
+
+Welcome to my ** Portfolio**! This repository showcases my journey and skills in the field of data and business intelligence, highlighting various projects that demonstrate my ability to transform raw data into actionable insights.
 
 ## Overview
 
